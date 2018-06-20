@@ -1,0 +1,16 @@
+<% if articles.empty? %>
+  No articles yet! <%= link_to 'Create one', '#' %>.
+<% else %>
+  <table class="table table-striped">
+    <tbody>
+    <% articles.each do |article| %>
+      <tr>
+        <td><h4><%= link_to article.title, article %></h4>
+          <br/>
+          <p><%= article.description %></p>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
